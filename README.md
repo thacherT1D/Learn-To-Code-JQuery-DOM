@@ -20,7 +20,7 @@ It will be most helpful for you to have a basic understanding of HTML, CSS, and 
 
 1. The following courses on Codecademy:
      * [HTML & CSS](https://www.codecademy.com/en/learn/web)
-     * [JavaScript](https://www.codecademy.com/en/learn/javascript) 
+     * [JavaScript](https://www.codecademy.com/en/learn/javascript) \n
     OR
 2. Completing the [Introduction to HTML and CSS](http://github.com/galvanizeOpenSource/learn-to-code-html-css) and [Introduction to JavaScript](http://github.com/galvanizeOpenSource/learn-to-code-javascript) courses by yourself or with us at [Learn to Code events](www.meetup.com/Learn-Code-Seattle/) held at your nearby Galvanize campus.
 
