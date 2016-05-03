@@ -2,7 +2,7 @@
 
 Learn how to code the Galvanize way in jQuery and explore the Document Object Model (DOM).
 
-This tutorial is heavily derived from [Learn Query](http://learn.jquery.com). To learn more, visit their site and explore!
+This tutorial is heavily derived from [Learn jQuery](http://learn.jquery.com). To learn more, visit their site and explore!
 
 ## What IS jQuery?
 
@@ -16,10 +16,12 @@ The Document Object Model (commonly known as the DOM) is a cross-platform, langu
 
 ## Pre-requisites for this course
 
-It will be most helpful for you to have a basic understanding of HTML, CSS, and JavaScript. You can gain that knowledge by completing either of the following:
+It will be most helpful for you to have a basic understanding of HTML, CSS, and JavaScript. You can gain that knowledge by completing the following:
 
-1. The [Galvanize pre-bootcamp course on Codecademy](http://codecademy.com/galvanize), or
-2. Completing the [Introduction to HTML and CSS](http://github.com/galvanizeOpenSource/learn-to-code-html-css) and [Introduction to JavaScript](http://github.com/galvanizeOpenSource/learn-to-code-javascript) courses by yourself or at your nearby Galvanize campus.
+1. The following courses on Codecademy:
+     * [HTML & CSS](https://www.codecademy.com/en/learn/web)
+     * [JavaScript](https://www.codecademy.com/en/learn/javascript) OR
+2. Completing the [Introduction to HTML and CSS](http://github.com/galvanizeOpenSource/learn-to-code-html-css) and [Introduction to JavaScript](http://github.com/galvanizeOpenSource/learn-to-code-javascript) courses by yourself or with us at [Learn to Code events](www.meetup.com/Learn-Code-Seattle/) held at your nearby Galvanize campus.
 
 **Installation requirements for this course**
 
@@ -34,10 +36,10 @@ It will be most helpful for you to have a basic understanding of HTML, CSS, and 
 2. Download the ZIP file of the course.
 3. Open the ZIP file of this course (do not try to make changes without extraction).
 4. Open the unzipped folder of this course in your text editor:
-5. Open the above viles in your text editor so that we can view them.
-     5. index.html
-     6. CSS/style.css
-     7. JS/custom.js
+5. Open the above files in your text editor so that we can view them.
+     * index.html
+     * CSS/style.css
+     * JS/custom.js
 
 **Set up your files to communicate with one another**
 
@@ -55,10 +57,10 @@ Below is what your code should look like once downloaded:
 </body>
 </html>
 ```
-Let's change that. Add the following links to the `<head>` element and near the bottom of the `<body>`.
-- `<link link rel="stylesheet" type="text/css" href="CSS/style.css" />` in between `<head>` and `</head>`
-- `<script src="JS/custom.js></script>` to the bottom of your body tag, just before `</body>`
-- `<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>` to the bottom of your body tag, just before `</body>`
+Let's change that.
+- Add `<link link rel="stylesheet" type="text/css" href="CSS/style.css" />` in between `<head>` and `</head>`
+- Add `<script src="JS/custom.js></script>` to the bottom of your body tag, just before `</body>`
+- Add `<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>` to the bottom of your body tag, just before `</body>`
 
 Your code should now look a lot more like the following:
 ```html
@@ -75,7 +77,7 @@ Your code should now look a lot more like the following:
 </body>
 </html>
 ```
-We will be loading jQuery from Google APIs instead of downloading the entire library onto our own computer. You're welcome to download the file yourself [here], but this will be a more efficient way to use JQuery moving forward.
+We will be loading jQuery from Google APIs instead of downloading the entire library onto our own computer, this will be a more efficient way to use JQuery moving forward.
 
 ## Your first task: Ready the Document!
 
