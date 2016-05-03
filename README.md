@@ -1,4 +1,4 @@
-# Learn To Code: Intro to JQuery and the DOM
+# Learn To Code: Intro to jQuery and the DOM
 
 Learn how to code the Galvanize way in jQuery and explore the Document Object Model (DOM).
 
@@ -16,12 +16,11 @@ The Document Object Model (commonly known as the DOM) is a cross-platform, langu
 
 ## Pre-requisites for this course
 
-It will be most helpful for you to have a basic understanding of HTML, CSS, and JavaScript. You can gain that knowledge by completing the following:
+It will be most helpful for you to have a basic understanding of HTML, CSS, and JavaScript. You can gain that knowledge by completing either of the following:
 
 1. The following courses on Codecademy:
      * [HTML & CSS](https://www.codecademy.com/en/learn/web)
      * [JavaScript](https://www.codecademy.com/en/learn/javascript) 
-OR
 2. Completing the [Introduction to HTML and CSS](http://github.com/galvanizeOpenSource/learn-to-code-html-css) and [Introduction to JavaScript](http://github.com/galvanizeOpenSource/learn-to-code-javascript) courses by yourself or with us at [Learn to Code events](www.meetup.com/Learn-Code-Seattle/) held at your nearby Galvanize campus.
 
 **Installation requirements for this course**
