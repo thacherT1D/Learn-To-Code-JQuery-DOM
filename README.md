@@ -6,9 +6,9 @@ This tutorial is heavily derived from [Learn jQuery](http://learn.jquery.com). T
 
 ## What IS jQuery?
 
-JQuery (also called jQuery in this tutorial) is a JavaScript library initially released in 2006 and stands as the most popular JavaScript library in use today. JQuery *IS* JavaScript, in a sense, written in a way that requires less code and improves the accessibility of an already relatively accessible language. 
+JQuery (also called jQuery in this tutorial) is a JavaScript library initially released in 2006 and stands as the most popular JavaScript library in use today. JQuery *IS* JavaScript, in a sense, written in a way that requires less code and improves the accessibility of an already relatively accessible language.
 
-This very quick tutorial will help you set up jQuery onto your computer and learn some of its basic usages. 
+This very quick tutorial will help you set up jQuery onto your computer and learn some of its basic usages.
 
 ## What IS the DOM?
 
@@ -20,7 +20,7 @@ It will be most helpful for you to have a basic understanding of HTML, CSS, and 
 
 1. The following courses on Codecademy:
      * [HTML & CSS](https://www.codecademy.com/en/learn/web)
-     * [JavaScript](https://www.codecademy.com/en/learn/javascript) 
+     * [JavaScript](https://www.codecademy.com/en/learn/javascript)
 2. Completing the [Introduction to HTML and CSS](http://github.com/galvanizeOpenSource/learn-to-code-html-css) and [Introduction to JavaScript](http://github.com/galvanizeOpenSource/learn-to-code-javascript) courses by yourself or with us at [Learn to Code events](www.meetup.com/Learn-Code-Seattle/) held at your nearby Galvanize campus.
 
 **Installation requirements for this course**
@@ -32,7 +32,7 @@ It will be most helpful for you to have a basic understanding of HTML, CSS, and 
 
 **Get the necessary files onto your computer!**
 
-1. Go to the link for this course [here](http://github.com/galvanizeOpenSource/learn-to-code-jquery). 
+1. Go to the link for this course [here](http://github.com/galvanizeOpenSource/learn-to-code-jquery).
 2. Download the ZIP file of the course.
 3. Open the ZIP file of this course (do not try to make changes without extraction).
 4. Open the unzipped folder of this course in your text editor:
@@ -57,10 +57,10 @@ Below is what your code should look like once downloaded:
 </body>
 </html>
 ```
-Let's change that.
+Let's change that by adding the links to the CSS and JavaScript files, and the jQuery library. Order and placement matters here!
 - Add `<link link rel="stylesheet" type="text/css" href="CSS/style.css" />` in between `<head>` and `</head>`
 - Add `<script src="JS/custom.js></script>` to the bottom of your body tag, just before `</body>`
-- Add `<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>` to the bottom of your body tag, just before `</body>`
+- Under the JavaScript link, add `<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>` to the bottom of your body tag, just before `</body>`
 
 Your code should now look a lot more like the following:
 ```html
@@ -85,7 +85,7 @@ Let's begin by familiarizing ourselves the the general syntax of jQuery. \n
 
 **You can invoke jQuery in generally two ways:**
 - `jQuery.` - the "super" object that invokes all other objects in your jQuery file.
-- `$` - Become familiar with this symbol - it is the alias for `jQuery`. Its appearance in a JavaScript file or an HTML script tag implies that jQuery will be used on this line and the blocks that follow. 
+- `$` - Become familiar with this symbol - it is the alias for `jQuery`. Its appearance in a JavaScript file or an HTML script tag implies that jQuery will be used on this line and the blocks that follow.
 
 After invoking jQuery, the syntax follows the JavaScript standard of "Define, Declare, Call". Behold, the first function you declare: "Document, Ready"!
 ```javascript
@@ -139,7 +139,7 @@ This is a button in HTML, set to the browser's default settings. Add it to the H
 </html>
 ```
 
-Save your HTML file and refresh your browser. It should now appear. How do we make this button interact with the jQuery? 
+Save your HTML file and refresh your browser. It should now appear. How do we make this button interact with the jQuery?
 
 **Choose your selector!** Capture `button` in the jQuery's selector:
 ```javascript
@@ -164,8 +164,17 @@ $( document ).ready(function() {
           window.alert("Nice clicking, there, friend!");
      });
 });
-``` 
+
 Now you know the general process of using jQuery. Let's try something new!
+
+Before we move on comment out the code we have added into your JS file so far -- this will stop the pop-ups from coming up each time we refresh and free up our button selector to be used elsewhere. The code in your JS file will now look like this:
+```$( document ).ready(function() {
+  // window.alert("The document is ready! (jQuery is working!)");
+  //
+  // $( 'button' ).click(function() {
+  //   window.alert("Nice clicking!");
+  // });
+});```
 
 ## Adding and Removing Classes in jQuery
 
@@ -177,9 +186,9 @@ Let's face it - your button is ugly. We can make it look better. We're going to 
 
 #### Back to CSS
 
-Fortunately, your CSS file already has a class called `.super-button` that can instantly improve the quality of yours:
+Fortunately, your CSS file already has a class called `.super` that can instantly improve the quality of yours:
 ```css
-.super-button {
+.super {
     color: #fff;
     background-color: #0275d8;
     border-color: #0275d8;
@@ -190,74 +199,80 @@ Fortunately, your CSS file already has a class called `.super-button` that can i
     border: 1px solid transparent;
 }    
 ```
-Don't worry if you don't fully understand what's happening here, but if you're interested, we're sampling the [Bootstrap large button](http://v4-alpha.getbootstrap.com/components/buttons/) class here.
+#### Create Something to Change
+In your HTML file add a div with some text for us to add and remove classes. Add an id to your text so we can identify it in the jQuery later, let's use the id `#textToChange`
+```
+<div id="textToChange">
+    the text we are changing goes here!
+</div>
+```
+#### Create the first link: #add
 
-#### Create the first link: #Add-Class
-
-Add the following code into the `<body>` of your HTML. It is a link with text, but for now it lacks function.
+Add the following code into the `<body>` of your HTML file. It is a new button, but for now it lacks function.
 ```html
 <div>
-     <a>Add Class</a>
+     <button>Add a Class</button>
 </div>     
 ```
-We'll need to give this link an `id` so that it matches up with the jQuery we'll create later. I suggest `#add-class`.
+We'll need to give this button an `id` so that it matches up with the jQuery we'll create later. Let's use the id `#add`.
 ```html
 <div>
-     <a id="add-class">Add Class</a>
+     <button id="add">Add a Class</button>
 </div>
 ```
 Now we're ready to set up our jQuery function. Add the following script into your `$( document ).ready()` function:
 ```javascript
-     $( '#add-class' ).click(function({
+     $( '#add' ).click(function({
      });
 ```
 Right now ths function does nothing when you click on it. Add the following script to this new function:
 ```javascript
-     $( '#add-class' ).click(function({
-          $( 'button' ).addClass('super-button');
+     $( '#add' ).click(function({
+          $( 'button' ).addClass('super');
      });
 ```
-Let's slow down for a second. What we've done is set up our jQuery file so that when you click on a link with the ID `#add-class`, it will add the CSS styles under `.super-button` to that `button`. Make sense?
+Let's slow down for a second. What we've done is set up our jQuery file so that when you click on a link with the ID `#add`, it will add the CSS styles under `.super` to that `button`. Make sense?
 
 *Gut check: what if we added more buttons? What would happen if we clicked this link?*
 
 Save all of your code and refresh your browser. Test the link. Did it work?
 
-#### Create the second link: #Remove-Class
+Repeating the method we used to build the add button, try creating the remove and toggle buttons on your own.
+Hint: the event handlers for remove and toggle are .removeClass and .toggleClass
 
-Let's keep the party going. Let's add a link that will remove the class. First step: adding the HTML below the last link.
-```html
-<div>
-     <a id="remove-class">Remove Class</a>
-</div>
+With all three added the new sections of our code will look like this:
+HTML file:
 ```
-We're now working with a new ID `#remove-class`. Let's make sure it has something to work with in the jQuery file. Add the following code in your `$( document ).ready()` function.
-```javascript
-     $( '#remove-class' ).click(function({
-          $( 'button' ).removeClass('super-button');
-     });
+  <div id="textToChange">
+     the text we are changing goes here!
+  </div>
+
+  <div>
+    <button id="add">Add a Class</button>
+  </div>
+
+  <div>
+    <button id="remove">Remove a Class</button>
+  </div>
+
+  <div>
+    <button id="toggle">Toggle Class</button>
+  </div>
 ```
-Notice the new event handler `.removeClass` - if you click on this new link, you'll remove the class you've just added.
-
-*Gut check: what if you never clicked on the first link? What would be the effect of clicking this one?*
-
-#### Create just one more link: #Toggle-Class
-
-Creating a button to do one thing and another to undo it is... kind of lame. Fortunately, in jQuery, there's another method you can use to `toggle` back and forth between `add` and `remove`: the conveniently named `.toggleClass()`.
-
-First step: create a third link in your HTML with the ID `toggle-class`.
-```html
-<div>
-     <a id="toggle-class">Toggle Class</a>
-</div>
+JS file:
 ```
-Second step: 
-```javascript
-     $( '#toggle-class' ).click(function({
-          $( 'button' ).toggleClass('super-button');
-     });
+$( '#add' ).click(function() {
+  $( '#textToChange' ).addClass('super');
+});
+
+$( '#remove' ).click(function() {
+  $( '#textToChange' ).removeClass('super');
+});
+
+$( '#toggle' ).click(function() {
+  $( '#textToChange' ).toggleClass('super');
+});
 ```
-Save your changes and refresh your browser. Did it work?
 
 Now you know how to add classes and IDs in HTML that you can interact with in jQuery!
 
@@ -287,7 +302,7 @@ Good! Now move over to your `custom.js` file and add the following jQuery code i
 ```
 The selector `this` is a cool jQuery selector that affects the same element in the selector above it. It will only impact that particular element, but you can reproduce this function for other elements as well, if they share the same class.
 
-Save your changes, refresh your browser, and test whether this works on all three `<div>`s. 
+Save your changes, refresh your browser, and test whether this works on all three `<div>`s.
 
 ## Time to dive into the DOM!
 
@@ -309,19 +324,19 @@ In other words, elements follow an implicit hierarchy of `parent` and `child`, o
 Create a list with the following HTML code in your `index.html` file. Add a button at the bottom.
 ```html
 <li>This is a list!
-     <ul>Item #1</ul> 
+     <ul>Item #1</ul>
      <ul>Item #2</ul>
      <ul>Item #3</ul>
 </li>
 <button></button>
 ```
 
-Let's create a jQuery function that deletes the top item on the list. 
+Let's create a jQuery function that deletes the top item on the list.
 
 First, we have to create an ID for the list: `item-list`. We also need an ID for the button: `delete-item`. Name the button as well.
 ```html
 <li id="item-list">This is a list!
-     <ul>Item #1</ul> 
+     <ul>Item #1</ul>
      <ul>Item #2</ul>
      <ul>Item #3</ul>
 </li>
