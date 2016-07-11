@@ -28,7 +28,7 @@ It will be most helpful for you to have a basic understanding of HTML, CSS, and 
 1. A reliable web browser. We recommend [Google Chrome](http://chrome.google.com) for element inspection.
 2. A good text editor. We recommend [Atom.io](atom.io).
 
-## Let's get started!
+## Let's get started
 
 **Get the necessary files onto your computer!**
 
